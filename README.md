@@ -1,4 +1,4 @@
-# Quantopian Backup
+# quantopian-backup
 
 Since Quantopian decided to shut down, I am migrating the code I wrote here. It is a collection of strategies that I wrote in my free time, over 2 summers and 1 winter break. I wrote them because I wanted to do something new that would be both fun and something to put on my resume.
 
