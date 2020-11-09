@@ -4,4 +4,4 @@ Since Quantopian decided to shut down, I am migrating the code I wrote here. It 
 
 All of these are unoptimized and rudimentary. I wrote them because I wanted to do something new that would both fun and something to put on my resume.
 
-As they are, they will run outside of the Quantopian environment. I may work on them in future should I decide to expand and optimize any of these and make them live.
+I heavily relied on the Pipeline API provided by Quantopian, thus they will not run outside of that environment. I may work on them in future should I decide to expand and optimize any of these and make them live.
