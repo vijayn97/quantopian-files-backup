@@ -16,11 +16,13 @@ def make_pipeline_buy():
     base_universe = QTradableStocksUS()
     revenue_growth = morningstar.operation_ratios.revenue_growth.latest
     dil_eps_growth = morningstar.earnings_ratios.diluted_eps_growth.latest
-    mktcap = morningstar.valuation.market_cap.latest
+    mktcap = morningstar.valuation.market_cap.latest # I tried optimizing this after backtesting a little
 
     # Picking stocks that show 20% revenue growth and 20% EPS growth
     rev_filter = revenue_growth > 0.20
     eps_filter = dil_eps_growth > 0.20
+    # mktcap_filter = 300000000 < mktcap < 2000000000
+    
 
     all_filters = rev_filter & eps_filter & base_universe
     
