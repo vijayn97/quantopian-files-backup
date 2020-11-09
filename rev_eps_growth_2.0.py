@@ -13,8 +13,6 @@ def initialize(context):
     schedule_function(close_positions, date_rules.month_start(), time_rules.market_open())
     context.max_notional = 2000
     
-
-    
 def make_pipeline():
     base_universe = QTradableStocksUS()
     revenue_growth = morningstar.operation_ratios.revenue_growth.latest
@@ -37,7 +35,6 @@ def make_pipeline():
     )
     return pipe
 
-
 def before_trading_start(context, data):
     context.output = pipeline_output('pipeline')
     context.stocks = context.output.head(20)
@@ -53,8 +50,3 @@ def close_positions(context,data):
     if today.month in [1,3,9,12]:
         for stock in context.portfolio.positions:
             order_target_percent(stock, 0)
-
-
-               
-               
-               
